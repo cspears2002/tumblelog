@@ -41,7 +41,7 @@ class DetailView(MethodView):
       post.comments.append(comment)
       post.save()
 
-      return redirect(url_for('posts.detail'), slug = slug)
+      return redirect(url_for('posts.detail', slug = slug))
 
     return render_template('posts/detail.html', **context)
 
